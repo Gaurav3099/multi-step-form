@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="form.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="main-heading">Multi Step Form</h1>
+    <div id="form-container">
+        <form method="POST" id="multi-step-form">
+            <!-- Step One -->
+            <div id="stepone">
+                <fieldset id="formstep">
+                <legend>Step:1</legend>
+                <div class="form-group">
+                    <label for="first_name">First Name *</label><br>
+                    <input type="text" id="first_name" placeholder="First name"><br>
+                    <p class="error-text" id="first-name-error">Please Enter valid First Name</p><br>
+                </div>
+                <div class="form-group">
+                    <label for="last_name">Last Name</label><br>
+                    <input type="text" id="last-name" placeholder="Last Name"><br><br>
+                    <!-- <p class="error-text" id="last-name-error"></p><br> -->
+                </div>
+                <div class="form-group">
+                    <label for="emailid">Email id *</label><br>
+                    <input type="email" name="emailid" id="emailid" placeholder="abc@zyz.com"><br>
+                    <p class="error-text" id="email-error">Please Enter valid Email id</p><br>
+                    <button id="gototwo" class="btn">Next</button>
+                </div>
+            </fieldset>
+            </div>            
+
+
+            <!-- Step Two -->
+            <div id="steptwo">
+                <fieldset id="formstep">
+                    <legend>Step:2</legend>
+                    <div class="form-group">
+                        <label for="contact">Contact *</label><br>
+                        <input type="number" id="contact" placeholder="Contact" class="ip"><br>
+                        <p class="error-text" id="contact-error">Please Enter valid Contact number</p><br>
+                    </div>
+                    <div class="form-group">
+                        <label for="city">City</label><br>
+                        <input type="text" id="city" placeholder="city" class="ip"><br><br>
+                       
+                    </div>
+                    <div class="form-group">
+                        <label for="country">Country *</label><br>
+                        <input type="text" name="country" id="country" placeholder="country" class="ip"><br>
+                        <p class="error-text" id="country-error">Please Enter valid Country</p><br>
+                        <button id="gotoone" class="btn1">Previous</button>
+                        <button id="gotothree" class="btn">Next</button>
+                    </div>
+                </fieldset>
+                </div>               
+
+                <!-- Step Three -->
+               
+                <div id="stepthree">
+                    <fieldset id="formstep">
+                    <legend>Step:3</legend>
+                    <div class="form-group">
+                        <label for="enrolled-prog">Enrolled Program *</label><br>
+                        <select id="select_program" class="ip">
+                            <option value="">- Select Program -</option>
+                            <option value="React Developer">React Developer</option>
+                            <option value="Angular Developer">Angular Developer</option>
+                            <option value="Python Developer">Python Developer</option>
+                        </select><br>
+                        <p class="error-text" id="prog-error">Please Enter select valid Program</p><br>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label><br>
+                        <input type="text" id="message" placeholder="" class="ip"><br><br>
+                        <!-- <p class="error-text" id="msg-error"></p> -->
+                    </div>
+                    <button id="pgototwo" class="btn1">Previous</button>
+                        <button id="submit" class="btn">Submit</button>
+                    </div>               
+                </fieldset>
+
+        </form>
+        <!-- Success Message -->
+        <div id="SuccessContainer">
+            <h3>Your form has been <br /> submitted successfully!</h3>
+            <p id="success"></p>
+        </div>
+    </div>
+</body>
+<script src="form.js"></script>
+</html>
